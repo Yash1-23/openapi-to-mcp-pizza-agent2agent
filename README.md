@@ -175,9 +175,10 @@ The focus is on protocol fidelity, clarity and extensibility, rather than model
 specific implementations
 
 ## Author
-# Name : Yashwanth Singh
-# Github: https://github.com/Yash1-23
-# LinkedIn: linkedin.com/in/yashwanthsingh
+ Name : Yashwanth Singh
+GitHub: https://github.com/Yash1-23
+LinkedIn: linkedin.com/in/yashwanthsingh
+
 
 
 
