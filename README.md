@@ -40,22 +40,30 @@ Delivery event scheduled
 ## Project Structure
 
 openapi-to-mcp-pizza-agent-to-agent/
+
 │
 ├── agents/
+
 │   ├── ordering_agent.py
+
 │   └── scheduling_agent.py
 │
 ├── mcp_servers/
+
 │   ├── pizza_mcp_server.py
+
 │   └── calendar_mcp_server.py
 │
 ├── mcp_generator/
+
 │   └── openapi_to_mcp.py
 │
 ├── openapi/
+
 │   └── pizza.yaml
 │
 ├── requirements.txt
+
 ├── README.md
 
 
@@ -176,4 +184,5 @@ specific implementations
 ## Name : Yashwanth Singh
 ## Github: https://github.com/Yash1-23
 ## LinkedIn: linkedin.com/in/yashwanthsingh
+
 
