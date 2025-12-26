@@ -43,23 +43,17 @@ openapi-to-mcp-pizza-agent-to-agent/
 
 │
 ├── agents/
-
 │   ├── ordering_agent.py
-
 │   └── scheduling_agent.py
 │
 ├── mcp_servers/
-
 │   ├── pizza_mcp_server.py
-
 │   └── calendar_mcp_server.py
 │
 ├── mcp_generator/
-
 │   └── openapi_to_mcp.py
 │
 ├── openapi/
-
 │   └── pizza.yaml
 │
 ├── requirements.txt
@@ -181,8 +175,9 @@ The focus is on protocol fidelity, clarity and extensibility, rather than model
 specific implementations
 
 ## Author
-## Name : Yashwanth Singh
-## Github: https://github.com/Yash1-23
-## LinkedIn: linkedin.com/in/yashwanthsingh
+# Name : Yashwanth Singh
+# Github: https://github.com/Yash1-23
+# LinkedIn: linkedin.com/in/yashwanthsingh
+
 
 
