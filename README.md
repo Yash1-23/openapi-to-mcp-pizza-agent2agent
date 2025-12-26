@@ -179,7 +179,8 @@ specific implementations
  
 GitHub: https://github.com/Yash1-23
 
-LinkedIn: linkedin.com/in/yashwanthsingh
+LinkedIn: https://linkedin.com/in/yashwanthsingh
+
 
 
 
