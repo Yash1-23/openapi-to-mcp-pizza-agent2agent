@@ -1,0 +1,99 @@
+openapi: 3.0.3
+
+info:
+  title: Pizza Ordering API
+  description: API for listing pizzas, placing orders, and tracking order status.
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8000
+
+paths:
+  /menu:
+    get:
+      summary: List available pizzas
+      operationId: listMenu
+      responses:
+        "200":
+          description: List of pizzas
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pizzas:
+                    type: array
+                    items:
+                      type: string
+
+  /orders:
+    post:
+      summary: Place a pizza order
+      operationId: placeOrder
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - pizza
+                - size
+              properties:
+                pizza:
+                  type: string
+                  example: Pepperoni
+                size:
+                  type: string
+                  enum: [small, medium, large]
+                  example: large
+      responses:
+        "200":
+          description: Order confirmation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  order_id:
+                    type: string
+                  pizza:
+                    type: string
+                  size:
+                    type: string
+                  status:
+                    type: string
+                  eta_minutes:
+                    type: integer
+
+  /orders/{order_id}:
+    get:
+      summary: Get order status
+      operationId: getOrderStatus
+      parameters:
+        - name: order_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Order status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  pizza:
+                    type: string
+                  size:
+                    type: string
+                  status:
+                    type: string
+                  eta_minutes:
+                    type: integer
+                  created_at:
+                    type: string
+
+
+

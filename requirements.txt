@@ -1,0 +1,9 @@
+#MCP frameworks
+fastmcp
+mcp
+
+#LLM
+groq
+
+#Environment variables
+python-dotenv
