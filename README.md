@@ -20,8 +20,104 @@ The goal of this project is too:
 3.Demonstrate agent cooperation through a real world ordering and scheduling workflow like it works as Agent-to-Agent workflow.
 
 
+## High-Level Architecture
+
+User
+ ↓
+Ordering Agent (LLM reasoning)
+ ↓
+Pizza MCP Server (generated from OpenAPI)
+ ↓
+(order_id, eta_minutes)
+ ↓   ← A2A communication
+Scheduling Agent
+ ↓
+Calendar MCP Server
+ ↓
+Delivery event scheduled
 
 
+## Project Structure
+
+openapi-to-mcp-pizza-agent-to-agent/
+│
+├── agents/
+│   ├── ordering_agent.py
+│   └── scheduling_agent.py
+│
+├── mcp_servers/
+│   ├── pizza_mcp_server.py
+│   └── calendar_mcp_server.py
+│
+├── mcp_generator/
+│   └── openapi_to_mcp.py
+│
+├── openapi/
+│   └── pizza.yaml
+│
+├── requirements.txt
+├── README.md
+
+
+## How the System works
+
+1. ## OpenAPI -> MCP
+   - Pizza API are defined using an OpenAPI specification.
+     
+   - A generator reads the OpenAPI file and creates MCP tool definitions.
+     
+   - The resulting MCP server exposes pizza functionally in a form usable by agents.
+
+2. ## Ordering Agent
+   - Accepts the natural language input from the user.
+     
+   - Uses an LLM to determine which MCP tool to call.
+     
+   - Calls the Pizza MCP server to place the order.
+   
+   - Receives structured order dict(order ID,ETA).
+
+3. ## Scheduling Agent(A2A)
+   - Receives order details from the Ordering Agent.
+  
+   - Communicates via Structured data
+  
+   - Calls a Calender MCP server to Schedule delivery
+  
+   - Returns confirmation to the user.
+  
+
+
+## Example Run
+
+User I'd like to order the Farmhouse pizza, medium size.
+LLM Decision: {
+  "tool": "place_order",
+  "arguments": {
+    "pizza": "Farmhouse",
+    "size": "medium"
+  }
+}
+
+ Order Confirmation:
+ 
+{'order_id': 'ORD-3C9617', 'pizza': 'Farmhouse', 'size': 'medium', 'status': 
+
+'confirmed', 'eta_minutes': 30}
+
+ Scheduling Agent received order details:
+ 
+{'order_id': 'ORD-3C9617', 'pizza': 'Farmhouse', 'size': 'medium', 'status':
+
+'confirmed', 'eta_minutes': 30}
+
+ Delivery Scheduled Calendar MCP
+ 
+{'event_id': 'EVT-FE5CFC', 'title': 'pizza delivery for order ORD-3C9617', 
+
+'start_time': '2025-12-26T23:16:54.539691', 'status': 'event created'}
+
+   
 
 
 
