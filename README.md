@@ -123,11 +123,57 @@ LLM Decision: {
 
 'start_time': '2025-12-26T23:16:54.539691', 'status': 'event created'}
 
-   
+
+## Setup Instructions
+
+## 1. Create virtual environment
+
+python -m venv venv
+
+source venv/bin/activate   # Windows: venv\Scripts\activate
+
+## 2. Install dependencies
+
+pip install -r requirements.txt
+
+## 3. Start MCP Servers
+
+python mcp_servers/pizza_mcp_server.py
+
+python mcp_servers/calendar_mcp_server.py
 
 
+## 4. Run the ordering Agent
+
+python -m agents.ordering_agent
 
 
+## Model Compatability
 
+The system is model-agnostic.
 
+Becuase execution is handled by  MCP servers, the ordering agent can use:
+
+- Groq
+- Chatgpt
+- Gemini
+
+No backend changes are required.
+
+## Conclusion
+This project shows how existing APIs can be made AI ready by:
+
+- Translating OpenAPI specifications into MCP servers.
+
+- Using agents as orchestration layers.
+
+- Enabling real-world workflows through agent cooperation.
+
+The focus is on protocol fidelity, clarity and extensibility, rather than model
+specific implementations
+
+## Author
+## Name : Yashwanth Singh
+## Github: https://github.com/Yash1-23
+## LinkedIn: linkedin.com/in/yashwanthsingh
 
