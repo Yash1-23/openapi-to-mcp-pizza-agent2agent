@@ -13,8 +13,11 @@ Traditional APIs are not directly interact with agents untless they are exposed 
 
 The goal of this project is too:
 1.Automatically  translate the OpenAPI specifications into MCP servers.
+
 2.Make pizza APIs accessible to AI agents.
+
 3.Demonstrate agent cooperation through a real world ordering and scheduling workflow like it works as Agent-to-Agent workflow.
+
 
 
 
