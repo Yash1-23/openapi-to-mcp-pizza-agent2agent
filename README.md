@@ -91,11 +91,17 @@ openapi-to-mcp-pizza-agent-to-agent/
 ## Example Run
 
 User I'd like to order the Farmhouse pizza, medium size.
+
 LLM Decision: {
+
   "tool": "place_order",
+  
   "arguments": {
-    "pizza": "Farmhouse",
-    "size": "medium"
+  
+   "pizza": "Farmhouse",
+   
+   "size": "medium"
+    
   }
 }
 
@@ -118,6 +124,7 @@ LLM Decision: {
 'start_time': '2025-12-26T23:16:54.539691', 'status': 'event created'}
 
    
+
 
 
 
