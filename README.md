@@ -135,7 +135,14 @@ python mcp_servers/pizza_mcp_server.py
 python mcp_servers/calendar_mcp_server.py
 
 
-## 4. Run the ordering Agent
+
+## 4. Run the ordering Agent/Scheduling Agent
+
+python agents/ordering_agent.py
+
+python agents/scheduling_agent.py
+
+## 5. Combine both ordering and Scheduling Agent (A2A)
 
 python -m agents.ordering_agent
 
@@ -170,6 +177,7 @@ specific implementations
 GitHub: https://github.com/Yash1-23
 
 LinkedIn: https://linkedin.com/in/yashwanthsingh
+
 
 
 
