@@ -23,17 +23,29 @@ The goal of this project is too:
 ## High-Level Architecture
 
 User
+
  ↓
+ 
 Ordering Agent (LLM reasoning)
+
  ↓
+ 
 Pizza MCP Server (generated from OpenAPI)
+
  ↓
+ 
 (order_id, eta_minutes)
+
  ↓   ← A2A communication
+ 
 Scheduling Agent
+
  ↓
+ 
 Calendar MCP Server
+
  ↓
+ 
 Delivery event scheduled
 
 
@@ -180,6 +192,7 @@ specific implementations
 GitHub: https://github.com/Yash1-23
 
 LinkedIn: https://linkedin.com/in/yashwanthsingh
+
 
 
 
