@@ -22,31 +22,9 @@ The goal of this project is too:
 
 ## High-Level Architecture
 
-User
 
- ↓
- 
-Ordering Agent (LLM reasoning)
 
- ↓
- 
-Pizza MCP Server (generated from OpenAPI)
-
- ↓
- 
-(order_id, eta_minutes)
-
- ↓   ← A2A communication
- 
-Scheduling Agent
-
- ↓
- 
-Calendar MCP Server
-
- ↓
- 
-Delivery event scheduled
+<img width="949" height="464" alt="Architecture_MCP_PIzza_Agent2Agent" src="https://github.com/user-attachments/assets/93b2ce42-a370-4203-b2a5-b88b0c9ef08b" />
 
 
 ## Project Structure
@@ -192,6 +170,7 @@ specific implementations
 GitHub: https://github.com/Yash1-23
 
 LinkedIn: https://linkedin.com/in/yashwanthsingh
+
 
 
 
